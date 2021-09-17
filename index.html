@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Адаптивное видео</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="items">
+			<h1>Галерея видео</h1>
+			<div class="items__container">
+				<div class="items__body">
+					<div class="item">
+						<div class="item__video">
+							<video preload="none" poster="img/poster.png" controls>
+								<source type="video/webm" src="video/shursha.webm">
+								<source type="video/mp4" src="video/shursha.mp4">
+							</video>
+						</div>
+						<div class="item__text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit
+						</div>
+					</div>
+					<div class="item">
+						<div class="item__video">
+							<video preload="none" poster="img/poster.png" controls>
+								<source type="video/webm" src="video/shursha.webm">
+								<source type="video/mp4" src="video/shursha.mp4">
+							</video>
+						</div>
+						<div class="item__text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit
+						</div>
+					</div>
+					<div class="item">
+						<div class="item__video">
+							<video preload="none" poster="img/poster.png" controls>
+								<source type="video/webm" src="video/shursha.webm">
+								<source type="video/mp4" src="video/shursha.mp4">
+							</video>
+						</div>
+						<div class="item__text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit
+						</div>
+					</div>
+					<div class="item">
+						<div class="item__video">
+							<video preload="none" poster="img/poster.png" controls>
+								<source type="video/webm" src="video/shursha.webm">
+								<source type="video/mp4" src="video/shursha.mp4">
+							</video>
+						</div>
+						<div class="item__text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit
+						</div>
+					</div>
+					<div class="item">
+						<div class="item__video">
+							<video preload="none" poster="img/poster.png" controls>
+								<source type="video/webm" src="video/shursha.webm">
+								<source type="video/mp4" src="video/shursha.mp4">
+							</video>
+						</div>
+						<div class="item__text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit
+						</div>
+					</div>
+					<div class="item">
+						<div class="item__video">
+							<iframe src="https://www.youtube.com/embed/PW3OIJOkK-g" title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+						</div>
+						<div class="item__text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="full-screen">
+		<div class="full-screen__body">
+			<div class="full-screen__title">SHURSHA</div>
+			<div class="full-screen__text">Это круто</div>
+		</div>
+		<video autoplay muted loop preload="auto" class="full-screen__video">
+			<source type="video/webm" src="video/shursha.webm">
+			<source type="video/mp4" src="video/shursha.mp4">
+		</video>
+	</div>
+	<div class="content">
+		<div class="content__container">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum alias architecto aliquid, dolores aperiam
+				aliquam, doloribus nulla modi inventore ipsam, laboriosam sunt porro vitae numquam debitis unde. Blanditiis,
+				dicta nesciunt.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum alias architecto aliquid, dolores aperiam
+				aliquam, doloribus nulla modi inventore ipsam, laboriosam sunt porro vitae numquam debitis unde. Blanditiis,
+				dicta nesciunt.</p>
+		</div>
+
+		<div class="lesson__comments">
+			<h4>Какие есть форматы видео?</h4>
+			<p><strong>mp4</strong> - Является самым популярным и работает во всех современных браузерах</p>
+			<p><strong>webm</strong> - Современный формат который не так хорошо поддерживается но у него есть ряд
+				преимуществ
+				такие как:</p>
+			<ul class="list-unstyled">
+				<li>- Лучше поддается сжатию без потери качества, то есть видеоролик будет создавать меньше нагрузку на
+					страницу
+				</li>
+				<li>- Есть возможность делать видео на прозрачном фоне, что порой бывает крайне полезно</li>
+			</ul>
+			<h4>Какой же формат видео использовать?</h4>
+			<p>Лучшим решением будет подключить оба формата, для этого нужно:</p>
+			<ol>
+				<li>Внутрь тега ... video, добавить тег ... sourse</li>
+				<li>Где в атрибуте ... srs, нужно указать путь к видеофайлу</li>
+				<li>Так же добавить атрибут ... type, указать значение формата видео</li>
+				<li>Затем продублировать этот тег, но в атрибуте ... srs, указать путь к новому формату видеофайла, так же в
+					атрибуте ... type, новый формат видео</li>
+				<li> В теге ... video, атрибут ... srs, более не нужен, его необходимо удалить</li>
+			</ol>
+			<p>Таким образом изначально будет загружаться видеофайл webm, но если он не поддерживается браузером то тогда
+				загрузиться видео с форматом mp4</p>
+			<h4>Атрибуты и их значения:</h4>
+			<h4>- srs -</h4>
+			<p>Указывает путь к воспроизводимую видеоролику</p>
+
+			<h4>- width -</h4>
+			<p>Задает ширину области для воспроизведения видеоролика</p>
+
+			<h4>- height -</h4>
+			<p>Задает высоту области для воспроизведения видеоролика</p>
+
+			<h4>- muted -</h4>
+			<p>Выключает аудиодорожку</p>
+
+			<h4>- autoplay -</h4>
+			<p>Видео начинает воспроизводиться автоматически после загрузки страницы</p>
+
+			<h4>- controls -</h4>
+			<p>Добавляет панель управления к видеоролику</p>
+
+			<h4>- loop -</h4>
+			<p>Повторяет воспроизведение видео с начала после его завершения</p>
+
+			<h4>- poster -</h4>
+			<p>Указываета адрес картинки, которая будет отображаться, пока видео не доступно или не воспроизводиться</p>
+
+			<h4>- preload -</h4>
+			<p>Этот атрибут предназначен для того, что бы контролировать загрузку медиафайла</p>
+			<p>Он может иметь одно из следующий значений:</p>
+			<ul class="list-unstyled">
+				<li>... none, указывает что видео не должно быть предварительно загружено</li>
+				<li>... metadata, указывает что предварительно загружаются метаданные видео, например время видео ролика
+				</li>
+				<li>... auto, указывает что весь медиафайл может быть загружен, даже если пользователь не должен его
+					использовать
+				</li>
+				<li>Пустая строка установит значение ... auto</li>
+			</ul>
+
+			<p>Если не задано значение атрибута то оно определяется браузером по-умолчанию. - «То есть каждый браузер имеет
+				по-умолчанию
+				значение данного атрибута»</p>
+			<p>Спецификация рекомендует использовать ... metadata</p>
+		</div>
+	</div>
+</body>
+
+</html>
